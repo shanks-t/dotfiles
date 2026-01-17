@@ -138,9 +138,14 @@
             "commands": ["workbench.action.closeAllEditors"]
         },
 
-        // Quick file explorer
+        // Toggle file explorer (like Neovim's <leader>e)
         {
             "before": ["<leader>", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        // Focus file explorer (like Neovim's <leader>o)
+        {
+            "before": ["<leader>", "o"],
             "commands": ["workbench.view.explorer"]
         },
 

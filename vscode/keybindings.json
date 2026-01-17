@@ -36,6 +36,18 @@
     // ============================================
     // File Explorer Vim Navigation
     // ============================================
+    // Ctrl+L to return to editor from sidebar (matches Neovim Ctrl+L)
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "sideBarFocus"
+    },
+    // Ctrl+H to focus sidebar from editor (matches Neovim Ctrl+H)
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusSideBar",
+        "when": "editorFocus"
+    },
     {
         "key": "j",
         "command": "list.focusDown",
