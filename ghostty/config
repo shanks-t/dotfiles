@@ -1,0 +1,17 @@
+theme = "Catppuccin Frappe"
+
+
+background-opacity = 0.8
+background-blur-radius = 20
+
+
+window-padding-x = 10
+window-padding-y = 10
+
+# Fast cycling (good when you don't care where it goes)
+keybind = ctrl+alt+super+shift+l=goto_split:next
+keybind = ctrl+alt+super+shift+h=goto_split:previous
+
+# Precise directional moves (good when you do care)
+keybind = ctrl+alt+super+shift+j=goto_split:down
+keybind = ctrl+alt+super+shift+k=goto_split:up
