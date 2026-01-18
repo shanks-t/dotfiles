@@ -97,7 +97,9 @@
         "<C-x>": false,
         "<C-w>": false,
         "<C-n>": false,
-        "<C-p>": false
+        "<C-p>": false,
+        "<C-e>": false,
+        "<C-S-e>": false
     },
 
     // ============================================

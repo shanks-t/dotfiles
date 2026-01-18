@@ -115,6 +115,15 @@ else
 fi
 echo ""
 
+# --- Neovim ---
+echo "--- Neovim ---"
+if [ -d "$DOTFILES_DIR/nvim" ]; then
+    create_symlink "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
+else
+    warn "Neovim config not found, skipping"
+fi
+echo ""
+
 # --- Raycast ---
 echo "--- Raycast ---"
 if [ -f "$DOTFILES_DIR/raycast/config.rayconfig" ]; then

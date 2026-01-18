@@ -9,7 +9,7 @@ Personal configuration files for syncing development environment across machines
 | **Ghostty** | GPU-accelerated terminal emulator | `ghostty/config` |
 | **Raycast** | Launcher and productivity tool | `raycast/config.rayconfig` |
 | **VSCode** | Editor settings and keybindings | `vscode/` |
-| **Neovim** | Separate repo at `~/.config/nvim` | [nvim config](https://github.com/treyshanks/nvim) |
+| **Neovim** | Editor config and plugins | `nvim/` |
 
 ## Directory Structure
 
@@ -21,6 +21,7 @@ Personal configuration files for syncing development environment across machines
 │   └── config              # Terminal theme, opacity, keybinds
 ├── raycast/
 │   └── config.rayconfig    # Raycast settings export
+├── nvim/                   # Neovim config (symlinked to ~/.config/nvim)
 └── vscode/
     ├── settings.json       # Editor settings
     └── keybindings.json    # Custom keybindings
@@ -56,6 +57,11 @@ ln -sf ~/.dotfiles/ghostty/config ~/.config/ghostty/config
 # Select: ~/.dotfiles/raycast/config.rayconfig
 ```
 
+**Neovim:**
+```bash
+ln -sf ~/.dotfiles/nvim ~/.config/nvim
+```
+
 **VSCode:**
 ```bash
 # macOS
@@ -80,6 +86,8 @@ When you make changes to configs on your machine and want to save them:
 # Export from Raycast: Settings → Advanced → Export
 # Save to: ~/.dotfiles/raycast/config.rayconfig
 ```
+
+**Neovim** - Edit `~/.dotfiles/nvim` directly (it's symlinked)
 
 **VSCode** - If symlinked, changes are automatic. Otherwise:
 ```bash
@@ -129,7 +137,7 @@ git pull
 
 ## Related Repositories
 
-- **[nvim](https://github.com/treyshanks/nvim)** - Neovim configuration (separate repo at `~/.config/nvim`)
+- **[nvim](https://github.com/treyshanks/nvim)** - Neovim configuration origin (now tracked in `nvim/`)
 
 ## Verification
 
@@ -138,6 +146,7 @@ Check that symlinks are working:
 ```bash
 # Should show symlinks pointing to ~/.dotfiles/
 ls -la ~/.config/ghostty/config
+ls -la ~/.config/nvim
 ls -la ~/Library/Application\ Support/Code/User/settings.json
 ```
 

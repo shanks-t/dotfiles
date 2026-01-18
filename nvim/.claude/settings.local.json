@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/treyshanks/.config/nvim add lua/plugins/markdown-preview.lua lazy-lock.json)",
+      "Bash(git -C /Users/treyshanks/.config/nvim commit -m \"$\\(cat <<''EOF''\nfeat: add markdown-preview.nvim plugin\n\nAdd iamcco/markdown-preview.nvim with lazy loading on markdown files.\nUses npx yarn install for proper build process.\n\nCommands: :MarkdownPreview, :MarkdownPreviewStop, :MarkdownPreviewToggle\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "WebFetch(domain:github.com)",
+      "Bash(node --version)",
+      "Bash(npm:*)",
+      "Bash(yarn --version)",
+      "Bash(git -C /Users/treyshanks/.config/nvim add AGENTS.md)",
+      "Bash(git -C /Users/treyshanks/.config/nvim commit -m \"$\\(cat <<''EOF''\ndocs: add AGENTS.md with repository guidelines\n\nAdd comprehensive documentation for AI agents and contributors.\nDescribes the repository purpose, philosophy, structure, and\ncontributing guidelines. Emphasizes simplicity-first approach\nand conventional commits workflow.\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C /Users/treyshanks/.config/nvim status)",
+      "Bash(npx --yes yarn install)",
+      "Bash(git -C /Users/treyshanks/.config/nvim add:*)",
+      "Bash(git -C /Users/treyshanks/.config/nvim commit -m \"$\\(cat <<''EOF''\nfix\\(markdown-preview\\): simplify config and document requirements\n\n- Remove cmd option to avoid conflicts with ft-based lazy loading\n- Plugin now loads automatically when opening markdown files\n- Add Node.js/yarn installation requirements to SETUP.md\n- Add markdown preview commands documentation\n- Add troubleshooting section for markdown-preview\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C /Users/treyshanks/.config/nvim log --oneline -5)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(defaults read:*)",
+      "Bash(find:*)",
+      "Bash(chmod:*)",
+      "Bash(git init:*)",
+      "Bash(gh repo create:*)",
+      "Bash(~/.dotfiles/install.sh)"
+    ]
+  }
+}

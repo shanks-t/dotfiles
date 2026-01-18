@@ -46,7 +46,7 @@
     {
         "key": "ctrl+h",
         "command": "workbench.action.focusSideBar",
-        "when": "editorFocus"
+        "when": "editorFocus && !editorTextFocus"
     },
     {
         "key": "j",
@@ -203,5 +203,53 @@
     {
         "key": "cmd+k",
         "command": "workbench.action.focusActiveEditorGroup"
+    },
+
+    // ============================================
+    // Split Navigation (matches Neovim Ctrl+h/l)
+    // ============================================
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight",
+        "when": "editorTextFocus"
+    },
+
+    // ============================================
+    // Tab Navigation (Vim-style Tab/Shift+Tab)
+    // ============================================
+    {
+        "key": "tab",
+        "command": "workbench.action.nextEditor",
+        "when": "editorTextFocus && !editorHasMultipleSelections && !editorHasSelection && !suggestWidgetVisible && !inSnippetMode && !quickFixWidgetVisible && !tabMovesFocus"
+    },
+    {
+        "key": "shift+tab",
+        "command": "workbench.action.previousEditor",
+        "when": "editorTextFocus && !editorHasMultipleSelections && !editorHasSelection && !suggestWidgetVisible && !inSnippetMode && !quickFixWidgetVisible && !tabMovesFocus"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.view.explorer",
+        "when": "!sidebarVisible"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.action.closeSidebar",
+        "when": "sidebarVisible && explorerViewletVisible"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.action.closeSidebar",
+        "when": "sidebarVisible && !explorerViewletVisible"
+    },
+    {
+        "key": "space",
+        "command": "list.select",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     }
 ]
