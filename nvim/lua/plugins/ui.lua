@@ -18,6 +18,11 @@ return {
           follow_current_file = {
             enabled = true,
           },
+          filtered_items = {
+            visible = true,         -- Show hidden files by default
+            hide_dotfiles = false,  -- Don't hide dotfiles
+            hide_gitignored = false, -- Show gitignored files too (optional)
+          },
         },
       })
       vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', { desc = 'Toggle file explorer' })
